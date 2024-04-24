@@ -7,28 +7,44 @@
         body {
             margin: 0;
             overflow: hidden;
-            background-image: url(https://github.com/Awadholems/comin-sson/blob/main/images/desktop-background.png?raw=true);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            height: 100vh;
+            background-image: url('https://github.com/Awadholems/coming-soon/raw/main/images/background.png');
+            background-size: cover;
+            backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+            color: white; /* Set text color to white */
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #logo {
+            margin-top: 20px; /* Adjust margin as needed */
+            max-width: 550px; /* Set maximum width for the logo */
+        }
+
+        #coming-soon {
+	    max-width: 300px; 
+            position: absolute;
+            bottom: 20px; /* Adjust distance from bottom */
+            right: 20px; /* Adjust distance from right */
         }
 
         @media (max-width: 767px) {
-            /* Adjustments for smaller screens */
-            body {
-                background-image: url(https://raw.githubusercontent.com/Awadholems/coming-soon/main/images/mobile_C.png);
-                background-attachment: scroll; /* Allow scrolling on small screens */
-                background-size: cover;
+            #coming-soon {
+                position: fixed;
+                bottom: 20px; /* Adjust distance from bottom */
+                right: 50%; /* Center horizontally on mobile */
+                transform: translateX(50%); /* Center horizontally on mobile */
             }
         }
     </style>
     <title>Coming Soon</title>
 </head>
 <body>
-    <!-- No content inside body, as the background image covers the entire screen -->
+    <img src="https://github.com/Awadholems/coming-soon/raw/main/images/official_logo.png" alt="Logo" id="logo"> <!-- Replace 'logo.png' with your logo image -->
+    <img src="https://github.com/Awadholems/coming-soon/raw/main/images/c_soon.png" alt="Coming Soon" id="coming-soon"> <!-- Replace 'coming-soon.png' with your "coming soon" image -->
 </body>
 </html>
